@@ -34,13 +34,13 @@ this folder to your PYTHONPATH and register this dialect with SQLAlchemy::
 testing
 -------
 
-you need to have nose and mock installed::
+you need to have pytest and pytest-cov installed::
 
-    $ pip install nose mock
+    $ pip install pytest pytest-cov
 
 Run the test suite::
 
-    $ ./run_tests.py
+    $ python setup.py test
 
 
 

@@ -23,13 +23,13 @@ usage
 To start using this dialect::
 
     from sqlalchemy import create_engine
-    engine = create_engine('rqlite:///demo:', echo=True)
+    engine = create_engine('rqlite+pyrqlite://localhost:4001/', echo=True)
 
 If you don't want to install this library (for example during development) add
 this folder to your PYTHONPATH and register this dialect with SQLAlchemy::
 
     from sqlalchemy.dialects import registry
-    registry.register("rqlite", "sqlalchemy_rqlite.dialect", "RqliteDialect")
+    registry.register("rqlite.pyrqlite", "sqlalchemy_rqlite.pyrqlite", "dialect")
 
 testing
 -------

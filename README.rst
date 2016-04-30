@@ -48,4 +48,4 @@ more info
 ---------
 
  * http://www.sqlalchemy.org/
- * https://github.com/otoolep/rqlite
+ * https://github.com/rqlite/rqlite

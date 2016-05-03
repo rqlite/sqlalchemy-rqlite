@@ -80,6 +80,7 @@ class SQLiteDialect_rqlite(SQLiteDialect):
         opts = url.query.copy()
         util.coerce_kw_type(opts, 'connect_timeout', float)
         util.coerce_kw_type(opts, 'detect_types', int)
+        util.coerce_kw_type(opts, 'max_redirects', int)
         opts['port'] = url.port
         opts['host'] = url.host
 

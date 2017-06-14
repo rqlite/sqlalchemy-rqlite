@@ -9,13 +9,11 @@ from setuptools import (
     find_packages,
 )
 
-sys.path.insert(0, 'src')
-from sqlalchemy_rqlite.constants import (
-    __author__,
-    __email__,
-    __license__,
-    __version__,
-)
+# Load constants.py without importing __init__.py, since pip
+# calls setup.py before sqlalchemy is installed.
+with open(os.path.join('src', 'sqlalchemy_rqlite', 'constants.py'), 'rt') as f:
+    exec(f.read())
+
 
 class PyTest(Command):
     user_options = [('match=', 'k', 'Run only tests that match the provided expressions')]

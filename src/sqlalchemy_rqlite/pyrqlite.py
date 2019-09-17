@@ -72,18 +72,18 @@ class SQLiteDialect_rqlite(SQLiteDialect):
             return pool.SingletonThreadPool
 
     def create_connect_args(self, url):
-        if url.username or url.password:
-            raise exc.ArgumentError(
-                "Invalid RQLite URL: %s\n"
-                "Valid RQLite URL forms are:\n"
-                " rqlite+pyrqlite://host:port/[?params]" % (url,))
-
         opts = url.query.copy()
         util.coerce_kw_type(opts, 'connect_timeout', float)
         util.coerce_kw_type(opts, 'detect_types', int)
         util.coerce_kw_type(opts, 'max_redirects', int)
         opts['port'] = url.port
         opts['host'] = url.host
+        
+        if url.username:
+            opts['user'] = url.username
+
+        if url.password:
+            opts['password'] = url.password
 
         return ([], opts)
 

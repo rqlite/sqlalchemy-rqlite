@@ -72,7 +72,7 @@ class SQLiteDialect_rqlite(SQLiteDialect):
             return pool.SingletonThreadPool
 
     def create_connect_args(self, url):
-        opts = url.query.copy()
+        opts = dict(url.query.items())
         util.coerce_kw_type(opts, 'connect_timeout', float)
         util.coerce_kw_type(opts, 'detect_types', int)
         util.coerce_kw_type(opts, 'max_redirects', int)

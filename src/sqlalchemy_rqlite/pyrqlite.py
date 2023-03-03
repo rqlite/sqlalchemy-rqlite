@@ -89,5 +89,16 @@ class SQLiteDialect_rqlite(SQLiteDialect):
 
     def is_disconnect(self, e, connection, cursor):
         return False
+    
+    def do_ping(self, dbapi_connection):
+        try:
+            dbapi_connection.ping(reconnect=True)
+        except self.dbapi.Error as err:
+            if self.is_disconnect(err, dbapi_connection, None):
+                return False
+            else:
+                raise
+        else:
+            return True
 
 dialect = SQLiteDialect_rqlite

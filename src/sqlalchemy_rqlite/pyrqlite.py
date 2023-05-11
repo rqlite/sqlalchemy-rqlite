@@ -47,7 +47,7 @@ class SQLiteDialect_rqlite(SQLiteDialect):
         }
     )
 
-    if not util.py2k:
+    if not getattr(util, "py2k", False):
         description_encoding = None
 
     driver = 'pyrqlite'

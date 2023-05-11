@@ -1,5 +1,7 @@
 rqlite dialect for SQLAlchemy
 ==============================
+.. image:: https://circleci.com/gh/rqlite/sqlalchemy-rqlite/tree/master.svg?style=svg
+    :target: https://circleci.com/gh/rqlite/sqlalchemy-rqlite/?branch=master
 
 This is the rqlite dialect driver for SQLAlchemy.
 

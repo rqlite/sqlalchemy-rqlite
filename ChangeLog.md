@@ -1,5 +1,8 @@
 
 
+## 2.0 (May 11 2023)
+- [PR #22](https://github.com/rqlite/sqlalchemy-rqlite/pull/22): Rename dbapi method to import_dbapi.
+
 ## 1.2 (May 11 2023)
 - [PR #17](https://github.com/rqlite/sqlalchemy-rqlite/pull/17): Make compatible with SQLAlchemy 2.0.
 - [PR #12](https://github.com/rqlite/sqlalchemy-rqlite/pull/12): Add do_ping for sqlalchemy_rqlite dialect.

@@ -54,7 +54,7 @@ class SQLiteDialect_rqlite(SQLiteDialect):
 
     # pylint: disable=method-hidden
     @classmethod
-    def dbapi(cls):
+    def import_dbapi(cls):
         try:
             # pylint: disable=no-name-in-module
             from pyrqlite import dbapi2 as sqlite
@@ -63,6 +63,9 @@ class SQLiteDialect_rqlite(SQLiteDialect):
             #raise e
             raise
         return sqlite
+
+    # SQLAlchemy 1.x compatibility.
+    dbapi = import_dbapi
 
     @classmethod
     def get_pool_class(cls, url):

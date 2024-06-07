@@ -38,6 +38,7 @@ class _SQLite_rqliteDate(DATE):
 
 class SQLiteDialect_rqlite(SQLiteDialect):
     default_paramstyle = 'qmark'
+    supports_statement_cache = True
 
     colspecs = util.update_copy(
         SQLiteDialect.colspecs,

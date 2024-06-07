@@ -2,6 +2,7 @@
 
 ## 2.0 (May 11 2023)
 - [PR #22](https://github.com/rqlite/sqlalchemy-rqlite/pull/22): Rename dbapi method to import_dbapi.
+- [PR #23](https://github.com/rqlite/sqlalchemy-rqlite/pull/23): Set supports_statement_cache = True.
 
 ## 1.2 (May 11 2023)
 - [PR #17](https://github.com/rqlite/sqlalchemy-rqlite/pull/17): Make compatible with SQLAlchemy 2.0.

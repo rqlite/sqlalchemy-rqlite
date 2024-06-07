@@ -1,5 +1,5 @@
 
-__version__ = "HEAD"
+__version__ = "2.0"
 __project__ = "sqlalchemy-rqlite"
 
 __author__ = "Zac Medico"

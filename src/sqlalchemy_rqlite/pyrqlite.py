@@ -105,4 +105,7 @@ class SQLiteDialect_rqlite(SQLiteDialect):
         else:
             return True
 
+    def _get_server_version_info(self, connection):
+        return self.dbapi.sqlite_version_info
+
 dialect = SQLiteDialect_rqlite

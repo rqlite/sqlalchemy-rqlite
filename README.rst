@@ -46,7 +46,7 @@ Run the test suite::
 
 
 
-more info
+more information
 ---------
 
  * http://www.sqlalchemy.org/
